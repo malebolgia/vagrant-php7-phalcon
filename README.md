@@ -10,7 +10,6 @@ inside:
 
 and:
 * Git
-* APC
 * Zephir
 * mc
 * htop
