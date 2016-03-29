@@ -174,7 +174,7 @@ export DEBIAN_FRONTEND=noninteractive
 apt-get install debconf-utils -y > /dev/null
 sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password root'
 sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password root'
-apt-get -q install -y mysql-server-5.6 mysql-client-5.6
+apt-get -q install -y mysql-server-5.7 mysql-client-5.7
 cp /etc/mysql/my.cnf /etc/mysql/my.bkup.cnf
 sed -i 's/bind-address/bind-address = 0.0.0.0#/' /etc/mysql/my.cnf
 mysql -u root -proot -e "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'root' WITH GRANT OPTION; FLUSH PRIVILEGES;"
