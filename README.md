@@ -2,9 +2,9 @@
 inside:
 * Nginx
 * PHP7
-* Phalcon
+* Phalcon 2.1.x
 * PHP-FPM
-* MySQL
+* MySQL 5.7
 * Redis
 * Composer
 
