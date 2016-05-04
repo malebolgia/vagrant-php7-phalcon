@@ -1,0 +1,6 @@
+{
+  "name": "Vagrant-php7-phalcon",
+  "tagline": "Vagrant virtual machine",
+  "body": "# Vagrant Phalcon PHP7\r\ninside:\r\n* Nginx\r\n* PHP7\r\n* Phalcon 2.1.x\r\n* PHP-FPM\r\n* MySQL 5.7\r\n* Redis\r\n* Composer\r\n\r\nand:\r\n* Git\r\n* Zephir\r\n* mc\r\n* htop\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
