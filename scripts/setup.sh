@@ -53,7 +53,7 @@ echo 'server {
     # check one name domain for simple application
     if ($domain ~ "^(.[^.]*)\.dev$") {
         set $domain $1;
-        set $rootpath "${domain}";
+        set $rootpath "${domain}/public/";
         set $servername "${domain}.dev";
     }
 
