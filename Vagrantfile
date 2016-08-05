@@ -3,9 +3,9 @@
 
 Vagrant.configure(2) do |config|
 
-    config.vm.box = "ubuntu/trusty32"
-
+    config.vm.box = "ubuntu/xenial64"
     config.vm.box_check_update = true
+    config.vm.hostname = "phalcon-vm"
 
     config.vm.network :forwarded_port, guest: 80, host: 8080
     config.vm.network :forwarded_port, guest: 3306, host: 3306
@@ -14,14 +14,14 @@ Vagrant.configure(2) do |config|
     config.vm.network "private_network", ip: "192.168.3.3"
 
     config.vm.provider :virtualbox do |v|
-        v.customize ["modifyvm", :id, "--memory", "1548"]
+        v.customize ["modifyvm", :id, "--memory", "2048"]
         v.customize ["modifyvm", :id, "--vram", "32"]
       end
 
     # config.vm.network "public_network"
 
-    config.vm.synced_folder "www/", "/vagrant/www", :mount_options => ["dmode=777", "fmode=666"], :owner => 'www-data', :group => 'www-data'
+    # config.vm.synced_folder "www/", "/vagrant/www", :mount_options => ["dmode=777", "fmode=666"], :owner => 'www-data', :group => 'www-data'
+    config.vm.synced_folder "www/", "/vagrant/www", owner: "www-data", group: "www-data"
 
-    config.vm.provision "shell", path: "setup.sh"
+    config.vm.provision "shell", path: "./scripts/setup.sh"
 end
-
