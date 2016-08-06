@@ -92,6 +92,12 @@ echo 'server {
         fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
     }
 
+    # turn off cache
+    location ~* ^.+\.(js|css)$ {
+        expires -1;
+        sendfile off;
+    }
+
     # disallow access to apache configs
     location ~ /\.ht {
         deny all;
