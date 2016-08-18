@@ -16,11 +16,10 @@ Vagrant.configure(2) do |config|
     config.vm.provider :virtualbox do |v|
         v.customize ["modifyvm", :id, "--memory", "2048"]
         v.customize ["modifyvm", :id, "--vram", "32"]
-      end
+    end
 
     # config.vm.network "public_network"
-
-    # config.vm.synced_folder "www/", "/vagrant/www", :mount_options => ["dmode=777", "fmode=666"], :owner => 'www-data', :group => 'www-data'
+    
     config.vm.synced_folder "www/", "/vagrant/www", owner: "www-data", group: "www-data"
 
     config.vm.provision "shell", path: "./scripts/setup.sh"
