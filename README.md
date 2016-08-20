@@ -1,4 +1,4 @@
-# Ubuntu Vagrant VM: Phalcon 3 + PHP 7
+# Ubuntu 16 Vagrant VM: Phalcon 3 + PHP 7
 * Git
 * Nginx
 * PHP 7
