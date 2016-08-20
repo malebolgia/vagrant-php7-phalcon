@@ -17,8 +17,6 @@ Vagrant.configure(2) do |config|
         v.customize ["modifyvm", :id, "--memory", "2048"]
         v.customize ["modifyvm", :id, "--vram", "32"]
     end
-
-    # config.vm.network "public_network"
     
     config.vm.synced_folder "www/", "/vagrant/www", owner: "www-data", group: "www-data"
 
