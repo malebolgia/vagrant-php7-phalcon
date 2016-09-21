@@ -6,6 +6,8 @@
 * MySQL 5.7
 * Redis
 * Composer
+* NodeJS
+* NPM
 
 # Quick install
 1. Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
