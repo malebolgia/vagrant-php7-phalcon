@@ -21,10 +21,6 @@
         * `brew install dnsmasq`
 7. :tada: :balloon:
 
-# Quick install from atlas.hashicorp
-1. `vagrant init uonick/phalcon-vm`
-2. `vagrant up --provider virtualbox`
-
 # Development
 1. Go to `vagrant-php7-phalcon/www/`
 2. Make `directory`
