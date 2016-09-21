@@ -147,7 +147,13 @@ echo "VAGRANT ==> Composer"
 curl -sS https://getcomposer.org/installer | php > /dev/null
 mv composer.phar /usr/local/bin/composer
 
-
+#
+# npm & nodejs
+#
+echo -e "----------------------------------------"
+echo "VAGRANT ==> NPM & NodeJS"
+sudo apt install -y npm
+sudo apt install -y nodejs
 
 #
 # redis
