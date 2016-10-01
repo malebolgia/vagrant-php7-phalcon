@@ -8,6 +8,7 @@
 * Composer
 * NodeJS
 * NPM
+* PHPUnit
 
 # Quick install
 1. Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
