@@ -3,7 +3,7 @@
 
 Vagrant.configure(2) do |config|
 
-    config.vm.box = "ubuntu/xenial64"
+    config.vm.box = "bento/ubuntu-16.04"
     config.vm.box_check_update = true
     config.vm.hostname = "phalcon-vm"
 
@@ -18,6 +18,7 @@ Vagrant.configure(2) do |config|
         v.customize ["modifyvm", :id, "--vram", "32"]
     end
     
+    # set project folder here:
     config.vm.synced_folder "www/", "/vagrant/www", owner: "www-data", group: "www-data"
 
     config.vm.provision "shell", path: "./scripts/setup.sh"
