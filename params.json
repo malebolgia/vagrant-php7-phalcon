@@ -1,6 +1,6 @@
 {
   "name": "Vagrant-php7-phalcon",
   "tagline": "Vagrant virtual machine",
-  "body": "# Vagrant Phalcon PHP7\r\ninside:\r\n* Nginx\r\n* PHP7\r\n* Phalcon 2.1.x\r\n* PHP-FPM\r\n* MySQL 5.7\r\n* Redis\r\n* Composer\r\n\r\nand:\r\n* Git\r\n* Zephir\r\n* mc\r\n* htop\r\n",
+  "body": "# Ubuntu 16.04 Vagrant VM: Phalcon 3 + PHP 7\r\n* Git\r\n* Nginx\r\n* PHP7\r\n* Phalcon\r\n* MySQL\r\n* Redis\r\n* Composer\r\n* NodeJS\r\n* Npm\r\n* Gulp\r\n* PHPUnit\r\n\r\n# Quick install\r\n1. Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads)\r\n2. Install [Vagrant](https://www.vagrantup.com/)\r\n3. Clone this project `git clone https://github.com/uonick/vagrant-php7-phalcon.git`\r\n4. Go to directory with README file (`cd vagrant-php7-phalcon`)\r\n5. Run `vagrant up`\r\n6. Run on host machine:\r\n    * Linux:\r\n        * `sudo apt-get install dnsmasq`\r\n        * `echo \"address=/.dev/192.168.3.3\" >> /etc/dnsmasq.conf`\r\n    * macOS:\r\n        * `brew install dnsmasq`\r\n7. :tada: :balloon:\r\n\r\n# Development\r\n1. Go to `vagrant-php7-phalcon/www/`\r\n2. Make `directory`\r\n3. Open url `http://directory.dev/`\r\n4. Enjoy :sunglasses:\r\n",
   "note": "Don't delete this file! It's used internally to help with page regeneration."
 }
