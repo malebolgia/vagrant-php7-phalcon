@@ -9,8 +9,6 @@ echo "============    BEGIN SETUP   ============="
 echo -e "----------------------------------------"
 sudo apt-get install -y language-pack-UTF-8
 sudo apt-get install -y build-essential python-software-properties software-properties-common
-sudo add-apt-repository -y ppa:ondrej/php
-sudo add-apt-repository -y ppa:ondrej/mysql-5.7
 sudo apt-get update
 sudo apt-get install -y re2c libpcre3-dev gcc make
 
@@ -123,8 +121,9 @@ sudo service nginx restart > /dev/null
 #
 echo -e "----------------------------------------"
 echo "VAGRANT ==> PHP 7"
-sudo apt-get install -y php7.0-fpm php7.0-cli php7.0-common php7.0-json php7.0-opcache php7.0-mysql php7.0-phpdbg php7.0-mbstring php7.0-gd php-imagick  php7.0-pgsql php7.0-pspell php7.0-recode php7.0-tidy php7.0-dev php7.0-intl php7.0-gd php7.0-curl php7.0-zip php7.0-xml mcrypt memcached
-sudo apt-get install -y phpunit
+sudo apt-get install -y php7.0-fpm php7.0-cli php7.0-common php7.0-json php7.0-opcache php7.0-mysql php7.0-phpdbg php7.0-mbstring php7.0-gd php-imagick  php7.0-pgsql php7.0-pspell php7.0-recode php7.0-tidy php7.0-dev php7.0-intl php7.0-gd php7.0-curl php7.0-zip php7.0-xml mcrypt memcached phpunit
+
+
 #
 # PHP Errors
 #
@@ -148,12 +147,12 @@ curl -sS https://getcomposer.org/installer | php > /dev/null
 mv composer.phar /usr/local/bin/composer
 
 #
-# npm & nodejs
+# Frontend Tools (npm, nodejs, gulp)
 #
 echo -e "----------------------------------------"
-echo "VAGRANT ==> NPM & NodeJS"
-sudo apt install -y npm
-sudo apt install -y nodejs
+echo "VAGRANT ==> Frontend Tools (npm, nodejs, gulp)"
+sudo apt install -y npm nodejs nodejs-legacy
+sudo npm install --global gulp-cli gulp
 
 #
 # redis
@@ -195,7 +194,7 @@ export DEBIAN_FRONTEND=noninteractive
 apt-get install -y debconf-utils -y > /dev/null
 sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password root'
 sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password root'
-apt-get -q install -y mysql-server-5.7 mysql-client-5.7
+sudo apt install -y mysql-server mysql-client
 sed -i 's/bind-address/bind-address = 0.0.0.0#/' /etc/mysql/mysql.conf.d/mysqld.cnf
 mysql -u root -proot -e "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'root' WITH GRANT OPTION; FLUSH PRIVILEGES;"
 service mysql restart
@@ -228,14 +227,12 @@ sudo service php7.0-fpm restart
 #
 # Add user to group
 #
-sudo usermod -a -G www-data ubuntu
+sudo usermod -a -G www-data vagrant
 
 #
 # COMPLETE
 #
 echo -e "----------------------------------------"
-echo -e "----------------------------------------"
 echo "======>  VIRTUAL MACHINE READY"
 echo "======>  TYPE 'vagrant ssh"
-echo -e "----------------------------------------"
 echo -e "----------------------------------------"

@@ -1,13 +1,14 @@
-# Ubuntu 16 Vagrant VM: Phalcon 3 + PHP 7
+# Ubuntu 16.04 Vagrant VM: Phalcon 3 + PHP 7
 * Git
 * Nginx
-* PHP 7
-* Phalcon 3
-* MySQL 5.7
+* PHP7
+* Phalcon
+* MySQL
 * Redis
 * Composer
 * NodeJS
-* NPM
+* Npm
+* Gulp
 * PHPUnit
 
 # Quick install
