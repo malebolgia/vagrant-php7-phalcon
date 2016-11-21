@@ -201,7 +201,7 @@ service mysql restart
 
 
 #
-# Phalcpn PHP Framework 3
+# Phalcon PHP Framework 3
 #
 echo -e "----------------------------------------"
 echo "VAGRANT ==> Setup Phalcon Framework 3"
