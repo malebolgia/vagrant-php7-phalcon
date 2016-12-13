@@ -30,3 +30,7 @@
 2. Make `directory`
 3. Open url `http://directory.dev/`
 4. Enjoy :sunglasses:
+
+# MySQL
+* login: `root`
+* password: `root`
