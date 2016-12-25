@@ -9,6 +9,7 @@
 * NodeJS
 * Npm
 * Gulp
+* Memcached
 * PHPUnit
 
 # Quick install
