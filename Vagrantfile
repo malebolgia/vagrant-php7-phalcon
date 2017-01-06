@@ -19,7 +19,7 @@ Vagrant.configure(2) do |config|
     end
     
     # set project folder here:
-    config.vm.synced_folder "www/", "/vagrant/www", owner: "vagrant", group: "www-data"
+    config.vm.synced_folder "www/", "/vagrant/www", owner: "www-data", group: "www-data"
 
     config.vm.provision "shell", path: "./scripts/setup.sh"
 end
