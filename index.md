@@ -1,4 +1,6 @@
 # Ubuntu 16.04 Vagrant VM: Phalcon 3 + PHP 7
+![logo](http://i.imgur.com/rKZ8aq9.png)
+
 * Git
 * Nginx
 * PHP7
@@ -9,6 +11,7 @@
 * NodeJS
 * Npm
 * Gulp
+* Memcached
 * PHPUnit
 
 # Quick install
@@ -27,6 +30,22 @@
 
 # Development
 1. Go to `vagrant-php7-phalcon/www/`
-2. Make `directory`
+2. Make `directory/public` or `directory/public/index.php`
 3. Open url `http://directory.dev/`
 4. Enjoy :sunglasses:
+
+# Domains
+* `domain.dev`
+  * `./www/domain/public/index.php`
+* `developer.dev`
+  * `./www/developer/public/index.php`
+
+# Subdomain
+* `sub.domain.dev`
+  * `./www/domain/sub/www/index.php`
+* `sub.developer.dev`
+  * `./www/developer/sub/www/index.php`
+  
+# MySQL
+* login: `root`
+* password: `root`
