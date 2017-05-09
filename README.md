@@ -18,14 +18,14 @@
 1. Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 2. Install [Vagrant](https://www.vagrantup.com/)
 3. Clone this project `git clone https://github.com/uonick/vagrant-php7-phalcon.git`
-4. Go to directory with README file (`cd vagrant-php7-phalcon`)
-5. Run `vagrant up`
-6. Run on host machine:
+4. Run on host machine:
     * Linux:
         * `sudo apt-get install dnsmasq`
         * `echo "address=/.dev/192.168.3.3" >> /etc/dnsmasq.conf`
     * macOS:
         * `brew install dnsmasq`
+5. Go to directory with README file (`cd vagrant-php7-phalcon`)
+6. Run `vagrant up`
 7. :tada: :balloon:
 
 # Development
