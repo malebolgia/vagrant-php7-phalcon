@@ -1,3 +1,9 @@
+# Windows 10 deployment:
+
+1. check windowsSystem32DriversEtc/hosts.sample add it to your Windows/System32/drivers/etc/hosts
+2. Vagrant file updated changed private IP and linked folder.
+3. Original instructions from the author below:
+
 # Ubuntu 16.04 Vagrant VM: Phalcon 3 + PHP 7
 ![logo](http://i.imgur.com/rKZ8aq9.png)
 
